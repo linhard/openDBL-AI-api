@@ -1,3 +1,4 @@
+import os
 import oracledb
 from flask import Flask, jsonify
 
