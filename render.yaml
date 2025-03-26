@@ -2,10 +2,10 @@ services:
   - type: web
     name: tokenizer-api
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
     region: oregon
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
     envVars:
       - key: DB_USER
         value: KLAUS
@@ -13,3 +13,4 @@ services:
         value: !monCarapach0
       - key: DB_DSN
         value: myadb_high.adb.eu-frankfurt-1.oraclecloud.com
+
