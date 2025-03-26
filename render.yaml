@@ -3,4 +3,13 @@ services:
     name: tokenizer-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    startCommand: python app.py
+    region: oregon
+    plan: free
+    envVars:
+      - key: DB_USER
+        value: KLAUS
+      - key: DB_PASSWORD
+        value: !monCarapach0
+      - key: DB_DSN
+        value: myadb_high.adb.eu-frankfurt-1.oraclecloud.com
