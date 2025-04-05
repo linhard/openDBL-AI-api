@@ -1,0 +1,4 @@
+Flask==2.3.2
+oracledb
+rdflib==6.2.0
+
