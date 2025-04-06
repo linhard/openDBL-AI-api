@@ -1,19 +1,20 @@
-# Basis-Image
+# Basisimage
 FROM python:3.11-slim
 
-# Arbeitsverzeichnis im Container setzen
+# Arbeitsverzeichnis im Container
 WORKDIR /app
 
 # Abhängigkeiten kopieren und installieren
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Anwendungscode kopieren
-COPY . .
+# Anwendungscode und .env-Datei kopieren
+COPY app.py .
+COPY .env .
 
-# Port 5001 für den Container freigeben
+# Port freigeben
 EXPOSE 5001
 
-# Befehl zum Starten der Anwendung
+# Startkommando
 CMD ["python", "app.py"]
 

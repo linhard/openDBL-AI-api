@@ -1,4 +1,5 @@
 Flask==2.3.2
 oracledb
+python-dotenv
 rdflib==6.2.0
 
